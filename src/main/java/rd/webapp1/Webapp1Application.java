@@ -18,10 +18,10 @@ public class Webapp1Application {
 	@Bean
 	public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
 			return args -> {
-					System.out.println("--- Spring's Bean definition names: ---");
+					System.out.println("--- Beans: ---");
 					String[] beanNames = ctx.getBeanDefinitionNames();
 					Arrays.sort(beanNames);
-					System.out.println(Arrays.toString(beanNames));
+					System.out.println(String.join("\n", beanNames));
 			};
 	}
 
