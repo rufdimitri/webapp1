@@ -33,6 +33,8 @@ public class WebSecurityConfig {
 
     @Bean
     public UserDetailsService userDetailsService() {
+        //TODO
+        //new org.springframework.security.provisioning.JdbcUserDetailsManager();
         UserDetails user =
                 User.withDefaultPasswordEncoder()
                         .username("user")
